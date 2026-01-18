@@ -1,16 +1,64 @@
-# React + Vite
+# 👟 Apex Runner – 3D Shoe Customizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Apex Runner** is an interactive 3D shoe customization experience built for the web.  
+It allows users to personalize different parts of a sneaker in real time by selecting colors, providing an immersive and product-oriented UI similar to modern e-commerce configurators.
 
-Currently, two official plugins are available:
+> _Design it your way. Wear it your style._
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 **Real-time color customization** of individual shoe parts
+- 🧩 **Modular architecture** for scalable customization logic
+- 🧠 **Context-based state management** (React Context API)
+- 🧵 **Mesh-level material control** using Three.js
+- 💡 **Data-driven configuration** (no hardcoded UI logic)
+- 🖱️ Smooth, intuitive UI with clear visual feedback
+- 🟢 Live engine status indicator with animated feedback
+- 🛒 Product-style layout ready for e-commerce extension
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Customizable Parts
+
+Each shoe section can be customized independently:
+
+- Midsole
+- Heel Tab
+- Quarter Overlay
+- Laces
+- Side Panels
+
+All parts are defined through a single configuration object, making it easy to extend or modify.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **@react-three/fiber**
+- **@react-three/drei**
+- **Three.js**
+- **GLTF 3D models**
+- **CSS (custom UI styling)**
+- **React Context API**
+
+---
+
+## 🧠 Architecture Overview
+
+### Customization System
+
+All customizable parts are defined in a central configuration object:
+
+```js
+SHOE_CUSTOMIZATION = {
+  Midsole: {
+    label: "Midsole",
+    meshNames: ["Object_10"],
+    colors: [...]
+  },
+  ...
+}
+```
